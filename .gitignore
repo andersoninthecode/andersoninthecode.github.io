@@ -1,0 +1,43 @@
+# Node.js modules
+node_modules/
+
+# Parcel bundler
+.parcel-cache
+
+# Build artifacts
+dist/
+build/
+.tmp/
+tmp/
+
+# Editor related
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swo
+*~
+*.log
+*.DS_Store
+
+# GitHub Pages specific
+.nojekyll
+
+# Netlify specific
+.netlify/
+
+# Dependency managers
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Environment variables
+.env
+*.env
+
+# Temporary files
+*.tmp
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
