@@ -2,8 +2,8 @@ import Linktree from "./linktree/page";
 
 export default function Home() {
   return (
-  <div>
-    <Linktree />
-  </div> 
+    <div>
+      <Linktree />
+    </div>
   );
 }
