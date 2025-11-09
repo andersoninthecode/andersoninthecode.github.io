@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Avatar from "@/components/header/Avatar";
 
 export default function Linktree() {
     return (
@@ -6,15 +6,7 @@ export default function Linktree() {
      
       <div className="w-full max-w-md mx-auto p-8">
         <div className="text-center">
-          <Image
-            className="w-24 h-24 rounded-full mx-auto mb-4"
-            src="./perfil.png"
-            alt="Foto de perfil"
-            width={100}
-            height={100}
-            priority
-          />
-
+        <Avatar alt="Foto de perfil" src="./perfil.png"/>
           <h1 className="text-2xl font-bold text-white">Anderson Santana</h1>
           <p className="text-gray-400 mb-8">Engenheiro de Software</p>
         </div>
