@@ -3,21 +3,23 @@ import Avatar from "./Avatar";
 
 export default function Header() {
   return (
-    <div className="flex justify-between items-center p-3">
-      <div className="flex justify-center items-center">
+    <header className="w-full flex flex-col items-center py-4 md:flex-row md:justify-between"> 
+      <div className="w-full flex flex-col items-center text-center md:w-auto md:flex-row md:text-left">
         <Avatar alt="Foto de perfil" src="/perfil.png" />
-        <div className="p-3 justify-items-start">
-          <h1 className="text-4xl font-bold w-full max-w-md mx-auto">
+        <div className="mt-4 md:mt-0 md:ml-4">
+          <h1 className="text-3xl md:text-4xl font-bold">
             Anderson Santana
           </h1>
-          <p className="text-gray-700">Engenheiro de Software</p>
+          <p className="text-lg text-gray-500 dark:text-gray-400">
+            Engenheiro de Software
+          </p>
         </div>
       </div>
-      <nav className="text-gray-700 text-xl flex justify-between gap-4">
+      <nav className="w-full flex justify-center mt-4 md:w-auto md:mt-0 text-xl gap-6"> 
         <Link href="/">Home</Link>
         <Link href="/sobre">Sobre</Link>
         <Link href="/posts">Posts</Link>
       </nav>
-    </div>
+    </header>
   );
 }

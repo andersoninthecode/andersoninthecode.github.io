@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "highlight.js/styles/github-dark-dimmed.css"; /* Tema escuro para realce de sintaxe */
 
 :root {
   --background: #ffffff;
@@ -23,4 +24,16 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+  Força a renderização de listas numeradas dentro do container 'prose'.
+  O 'prose' do Tailwind redefine as listas para usar pseudo-elementos,
+  o que pode falhar. Este trecho restaura o comportamento padrão do navegador.
+*/
+.prose ol,
+.prose ul {
+  list-style: revert;
+  margin: revert;
+  padding: revert;
 }

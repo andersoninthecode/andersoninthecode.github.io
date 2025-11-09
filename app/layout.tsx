@@ -29,9 +29,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="container mx-auto">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8"> {/* Adiciona padding responsivo ao container principal */}
           <Header />
-          <div className="px-30 h-150">{children}</div>
+          <div className="py-8 md:px-10">{children}</div> {/* Remove px-30 e adiciona padding vertical padrão */}
           <Footer/>
         </div>
       </body>
