@@ -29,6 +29,20 @@ npx create-next-app@latest blog-app --yes
 cd blog-app
 npm run dev
 ```
+Você precisará fazer uma configuração no arquivo `next.config.ts` deixando como no código abaixo, isso eé necessário para que não tenhamos problemas na horra de gerar os arquivos estáticos para o Github Pages.
+
+``` javascript
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  output: "export",
+  images: {
+    unoptimized: true,
+  },
+};
+
+export default nextConfig;
+```
         
 
 Com isso provavelmente seu projeto foi criado e está em execução.
