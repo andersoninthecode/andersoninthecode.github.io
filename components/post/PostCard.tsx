@@ -11,7 +11,7 @@ interface PostCardProps {
 
 const PostCard: FC<PostCardProps> = ({ title, date, excerpt, slug }) => {
   return (
-    <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100">
+    <div className="group bg-gray-50 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100">
       
       <Link href={`./posts/${slug}`}>
         <div className="block p-5 cursor-pointer h-full">

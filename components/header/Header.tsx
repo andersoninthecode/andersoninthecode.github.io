@@ -3,7 +3,7 @@ import Avatar from "./Avatar";
 
 export default function Header() {
   return (
-    <header className="w-full flex flex-col items-center py-4 md:flex-row md:justify-between"> 
+    <header className="w-full flex flex-col items-center py-4 md:flex-row md:justify-between lg:px-4"> 
       <div className="w-full flex flex-col items-center text-center md:w-auto md:flex-row md:text-left">
         <Avatar alt="Foto de perfil" src="/perfil.png" />
         <div className="mt-4 md:mt-0 md:ml-4">

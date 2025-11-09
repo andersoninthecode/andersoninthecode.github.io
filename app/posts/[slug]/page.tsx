@@ -12,13 +12,20 @@ export default async function Post({ params }: Props) {
   const content = await markdownToHtml(post.content || "");
 
   console.log(content);
-  
 
   return (
-    <main className="md:px-40"> {/* Adiciona padding horizontal apenas em telas médias ou maiores */}
-      <article className="prose prose-lg prose-invert mx-auto prose-ol:list-decimal prose-ol:text-inherit">
+    <main>
+      <article>
         <h1 className="text-3xl text-center mb-6">{post.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: content }} />
+        <div
+          className="prose prose-lg 
+                     prose-invert mx-auto
+                     prose-headings:text-neutral-100 
+                     prose-p:text-neutral-300 
+                     prose-img:mx-auto 
+                     prose-img:block"
+          dangerouslySetInnerHTML={{ __html: content }}
+        />
       </article>
     </main>
   );

@@ -1,24 +1,38 @@
 export default function Sobre() {
   return (
-    <div className="">
-      <h1 className="text-4xl font-bold items-center">Sobre mim!</h1>
+    <div className="px-50">
+      <h1 className="text-4xl font-bold text-center mb-10">Sobre mim!</h1>
       <p>
-        Com mais de 5 anos de experiência como Engenheiro de Software,
-        especializo-me no desenvolvimento e sustentação de sistemas de backend
-        de alta complexidade. Atualmente no PagBank, atuo na plataforma de
-        logística de demanda de máquinas, utilizando Java, Kotlin e Spring Boot
-        e Quarkus. Minha experiência também se estende ao frontend com HTML,
-        CSS, JavaScript e React(NextJs), permitindo-me contribuir com soluções
-        completas e inovadoras para o negócio. Anteriormente na Zup Innovation,
-        aprimorei minha expertise em integração de sistemas, incluindo gateways
-        de pagamento, parceiros logísticos e soluções antifraude. Desenvolvi e
-        implementei APIs robustas para plataformas de e-commerce e backoffice.
-        Possuo sólido conhecimento em Clean Architecture, DDD (Domain-Driven
-        Design), Design Patterns e princípios SOLID. Tenho também ampla
-        experiência com infraestrutura em nuvem, especialmente AWS. Sou movido
-        por desafios técnicos e busco constantemente aplicar minhas habilidades
-        para criar soluções escaláveis e eficientes, colaborando ativamente com
-        equipes para entregar resultados de alto impacto.
+        Com mais de 5 (cinco) anos de experiência como Engenheiro de Software, minha
+        base inclui formação em Análise e Desenvolvimento de Sistemas pela UNESA e
+        Pós-graduação no curso de Java Applied Engineering na Faculdade Anhanguera(UNIPDS). 
+        Essa trajetória me ajudou a consolidar habilidades técnicas avançadas em sistemas 
+        backend de alta complexidade.
+      </p>
+      <br />
+      <p>
+        Atualmente, estou no PagBank, focado na plataforma de logística de
+        demanda de máquinas, onde coloco a mão na massa com Java, Kotlin, Spring
+        Boot e Quarkus. Minha experiência não para no backend: também atuo no
+        frontend com HTML, CSS, JavaScript e React (Next.js), o que me permite
+        entregar soluções de ponta a ponta e inovadoras para o negócio.
+      </p>
+      <br />
+
+      <p>
+        Antes disso, na Zup Innovation, aprofundei minha expertise em integração
+        de sistemas, criando APIs robustas para e-commerce e backoffice,
+        incluindo gateways de pagamento, parceiros logísticos e soluções
+        antifraude.
+      </p>
+      <br />
+      <p>
+        Tenho uma base sólida em Clean Architecture, DDD (Domain-Driven Design),
+        Design Patterns e princípios SOLID, além de ampla vivência com
+        infraestrutura em nuvem, principalmente AWS. Sou um profissional movido
+        por desafios técnicos, sempre buscando aplicar minhas habilidades para
+        criar soluções escaláveis e eficientes, e adoro colaborar ativamente com
+        a equipe para gerar resultados de alto impacto.
       </p>
     </div>
   );
