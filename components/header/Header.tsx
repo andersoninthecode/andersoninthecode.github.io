@@ -7,7 +7,7 @@ export default function Header() {
       <div className="w-full flex flex-col items-center text-center md:w-auto md:flex-row md:text-left">
         <Avatar alt="Foto de perfil" src="/perfil.png" />
         <div className="mt-4 md:mt-0 md:ml-4">
-          <h1 className="text-3xl md:text-4xl font-bold">
+          <h1 className="text-4xl md:text-4xl font-bold">
             Anderson Santana
           </h1>
           <p className="text-lg text-gray-500 dark:text-gray-400">

@@ -23,7 +23,10 @@ export default async function Post({ params }: Props) {
                      prose-headings:text-neutral-100 
                      prose-p:text-neutral-300 
                      prose-img:mx-auto 
-                     prose-img:block"
+                     prose-img:block
+                     prose-h2:text-2xl"
+          
+                    
           dangerouslySetInnerHTML={{ __html: content }}
         />
       </article>
