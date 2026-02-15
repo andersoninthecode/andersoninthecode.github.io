@@ -1,6 +1,6 @@
 ---
 title: "Como publicar seu projeto Next.js no GitHub Pages - 2025"
-excerpt: "A arquitetura limpa nos traz uma proposta de design de código que a princípio parece complicada, principalmente..."
+excerpt: "Aprenda de forma prática como criar um projeto Next.js e publicá-lo gratuitamente no GitHub Pages utilizando GitHub Actions."
 coverImage: "/posts/images/perfilPost.png"
 date: "2025-10-08T05:35:07.322Z"
 author:
@@ -12,16 +12,15 @@ ogImage:
 
 ## Introdução
 
-Eu li recentemente um livro do Hogo Santos. Esse livro me impactou muito, não por falar algo incrível, mas por mostrar algo óbvio que de alguma forma eu não conseguia enxergar e que, às vezes é dito ou mostrado por outros. O livro aborda diversos tópicos que você terá que ler para saber, mas o princípio que quero destacar — e que me motivou a criar e iniciar este blog — foi o tópico do "Programador Celebridade". Mas o que seria isso?
+Recentemente, li um livro do Hugo Santos que me impactou profundamente. Não por apresentar algo revolucionário, mas por iluminar algo óbvio que, por alguma razão, eu não conseguia enxergar. Embora o livro aborde diversos tópicos interessantes, o princípio que quero destacar, e que me motivou a iniciar este blog, é o conceito do "Programador Celebridade".
 
-Esse princípio é basicamente o conceito do marketing digital que trata da construção de autoridade na internet, que no nosso caso é feita através da criação de artigos e vídeos. Como primeiro artigo aqui do site, irei mostrar como podemos criar um site com Next.js e publicá-lo no GitHub Pages.
+Esse princípio baseia-se no marketing digital e trata da construção de autoridade na internet. Para nós desenvolvedores, essa autoridade é construída através da criação de conteúdo, como artigos e vídeos. Como primeiro artigo do site, demonstrarei como criar um projeto com Next.js e publicá-lo no GitHub Pages.
 
-Não irei entrar em detalhes sobre o Next.js, nem criar um tutorial sobre linguagens de programação ou outros detalhes complexos do framework. Iremos criar apenas o projeto, e a página inicial gerada automaticamente será usada para a publicação no GitHub Pages.
+O foco aqui não será aprofundar nos detalhes do Next.js ou ensinar programação do zero. Criaremos apenas a estrutura inicial do projeto e utilizaremos a página gerada automaticamente para realizar o deploy.
 
-## Criação do projeto NextJs
+## Criação do projeto Next.js
 
-Certifique-se de que você tenha o node instalado no sua máquina, logo depois você pode abrir seu terminal e digitar
-ou copiar e coloar o código abaixo, em um diretório de sua preferência
+Certifique-se de que você tenha o Node.js instalado em sua máquina. Em seguida, abra seu terminal no diretório de sua preferência e execute o comando abaixo:
 
         
 ```bash
@@ -29,7 +28,7 @@ npx create-next-app@latest blog-app --yes
 cd blog-app
 npm run dev
 ```
-Você precisará fazer uma configuração no arquivo `next.config.ts` deixando como no código abaixo, isso eé necessário para que não tenhamos problemas na horra de gerar os arquivos estáticos para o Github Pages.
+Será necessário ajustar o arquivo `next.config.ts` conforme o código abaixo. Essa configuração é essencial para evitar problemas ao gerar os arquivos estáticos para o GitHub Pages.
 
 ``` javascript
 import type { NextConfig } from "next";
@@ -45,35 +44,35 @@ export default nextConfig;
 ```
         
 
-Com isso provavelmente seu projeto foi criado e está em execução.
+Com isso, seu projeto deve ter sido criado e estar em execução corretamente.
 
 ## Publicação no GitHub Pages
 
-Você precisará navegar até seu GitHub e criar um repositório, logo depois você poderá seguir as instruções de como 
-conectar ao seu projeto local, se certifique de que sua branch main em seu ambiente local é o mesmo do repositório 
-remoto, geralmente é a main e não a master. Faça um push na main retorne para página do GitHub e depois para seu repositório.
-Logo depois **clique em Settings e em seguida Pages**.
+Acesse sua conta no GitHub e crie um novo repositório. Siga as instruções fornecidas pelo próprio GitHub para conectar seu projeto local ao repositório remoto. Certifique-se de que a branch principal seja a `main` e não `master`.
+
+Após fazer o push do código para a branch `main`, retorne à página do seu repositório no GitHub.
+
+No menu superior do repositório, clique em **Settings** e, na barra lateral esquerda, selecione **Pages**.
 
 ![Settings -> Pages](/posts/images/git_hub_pages_01.png "1.0")
 
-Em seguida clique em "Deploy from a branch", você verá um botão chamada Github Actions, clique nela.
+Na seção **Build and deployment**, altere a opção **Source** para **GitHub Actions**.
 
 ![Deploy from a branch](/posts/images/git_hub_pages_02.png "2.0")
 
-Depois de clicar em Github Actions, você verá um funcionalidade chamada Next.js, isso gerará um arquivo chamado nextjs.yml que é
-um conjunto de actions do git workflows que já faz tudo para você ter o seu site ou página criado com Next.js no GitHub Pages.
+Ao selecionar GitHub Actions, localize o card sugerido para **Next.js**. Ele configurará automaticamente um workflow (arquivo `nextjs.yml`) com todas as ações necessárias para construir e publicar seu site.
 
 ![Next.js](/posts/images/git_hub_pages_03.png "3.0")
 
-Clique em Configure e depois commit na próxima tela que aparecerá.
+Clique em **Configure** e, na próxima tela, clique em **Commit changes** para salvar o arquivo.
 
 ![Configure](/posts/images/git_hub_pages_04.png "4.0")
 
-Navegue até a página inicial do seu repositório e você verá que u Github actions foi disparado
+Volte para a página inicial do repositório (aba Code) e você notará que um workflow do GitHub Actions foi iniciado.
 
 ![Github actions](/posts/images/git_hub_pages_05.png "5.0")
 
-Se clicar em Actions verá o deploy sendo concluído com sucesso.
+Ao clicar na aba **Actions**, você poderá acompanhar o processo. Quando o ícone ficar verde, o deploy terá sido concluído com sucesso.
 
 ![Deploy concluído](/posts/images/git_hub_pages_06.png "6.0")
 
