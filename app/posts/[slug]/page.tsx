@@ -14,19 +14,23 @@ export default async function Post({ params }: Props) {
   console.log(content);
 
   return (
-    <main>
-      <article>
-        <h1 className="text-3xl text-center mb-6">{post.title}</h1>
+    <main className="max-w-4xl mx-auto">
+      <article className="space-y-8">
+        <header className="space-y-4 text-center">
+          <time className="text-sm font-semibold uppercase tracking-wider text-indigo-500">
+            Tutorial
+          </time>
+          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-primary">
+            {post.title}
+          </h1>
+          <div className="w-24 h-1 bg-indigo-500 mx-auto rounded-full"></div>
+        </header>
+
         <div
-          className="prose prose-lg 
-                     prose-invert mx-auto
-                     prose-headings:text-neutral-100 
-                     prose-p:text-neutral-300 
-                     prose-img:mx-auto 
-                     prose-img:block
-                     prose-h2:text-2xl"
-          
-                    
+          className="prose prose-zinc dark:prose-invert max-w-none 
+                     prose-headings:scroll-mt-20
+                     prose-pre:bg-card prose-pre:border prose-pre:border-border
+                     prose-img:rounded-2xl"
           dangerouslySetInnerHTML={{ __html: content }}
         />
       </article>
