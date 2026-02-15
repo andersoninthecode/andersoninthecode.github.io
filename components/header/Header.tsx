@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Avatar from "./Avatar";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Header() {
   return (
@@ -18,29 +19,32 @@ export default function Header() {
             </div>
           </Link>
 
-          <nav className="flex items-center gap-8">
-            <Link
-              href="/"
-              className="text-sm font-medium hover:text-indigo-500 transition-colors relative group"
-            >
-              Home
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-500 transition-all group-hover:w-full"></span>
-            </Link>
-            <Link
-              href="/sobre"
-              className="text-sm font-medium hover:text-indigo-500 transition-colors relative group"
-            >
-              Sobre
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-500 transition-all group-hover:w-full"></span>
-            </Link>
-            <Link
-              href="/posts"
-              className="text-sm font-medium hover:text-indigo-500 transition-colors relative group"
-            >
-              Posts
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-500 transition-all group-hover:w-full"></span>
-            </Link>
-          </nav>
+          <div className="flex items-center gap-4">
+            <nav className="flex items-center gap-8">
+              <Link
+                href="/"
+                className="text-sm font-medium hover:text-indigo-500 transition-colors relative group"
+              >
+                Home
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-500 transition-all group-hover:w-full"></span>
+              </Link>
+              <Link
+                href="/sobre"
+                className="text-sm font-medium hover:text-indigo-500 transition-colors relative group"
+              >
+                Sobre
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-500 transition-all group-hover:w-full"></span>
+              </Link>
+              <Link
+                href="/posts"
+                className="text-sm font-medium hover:text-indigo-500 transition-colors relative group"
+              >
+                Posts
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-500 transition-all group-hover:w-full"></span>
+              </Link>
+            </nav>
+            <ThemeToggle />
+          </div>
         </div>
       </div>
     </header>

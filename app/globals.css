@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
   --background: #fafafa;
@@ -23,17 +24,15 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #09090b;
-    --foreground: #fafafa;
-    --card: #18181b;
-    --card-foreground: #fafafa;
-    --border: #27272a;
-    --primary: #fafafa;
-    --glass: rgba(9, 9, 11, 0.7);
-    --glass-border: rgba(39, 39, 42, 0.5);
-  }
+.dark {
+  --background: #09090b;
+  --foreground: #fafafa;
+  --card: #18181b;
+  --card-foreground: #fafafa;
+  --border: #27272a;
+  --primary: #fafafa;
+  --glass: rgba(9, 9, 11, 0.7);
+  --glass-border: rgba(39, 39, 42, 0.5);
 }
 
 body {

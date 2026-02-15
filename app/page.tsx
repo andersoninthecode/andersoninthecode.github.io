@@ -75,21 +75,38 @@ export default function Home() {
 
       {/* Trust/Experience Section */}
       <div className="w-full max-w-5xl pt-24 pb-12">
-        <div className="bg-indigo-600 rounded-3xl p-8 md:p-12 text-white text-left relative overflow-hidden">
-          <div className="relative z-10 space-y-6 max-w-2xl">
-            <h2 className="text-3xl font-bold">Experiência em Grandes Escalas</h2>
-            <p className="text-indigo-100 text-lg">
-              Atualmente no <strong>PagBank</strong>, sustentando plataformas logísticas críticas que suportam milhões de transações.
-              Especialista em transformar complexidade técnica em valor de negócio através de código robusto e arquitetura evolutiva.
-            </p>
-            <Link
-              href="/sobre"
-              className="inline-flex items-center text-white font-bold hover:underline gap-2"
-            >
-              Ver perfil completo <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-            </Link>
+        <div className="relative overflow-hidden rounded-3xl border border-indigo-500/20 bg-gradient-to-br from-indigo-600/90 via-indigo-900/90 to-slate-900/90 p-8 md:p-12 text-left shadow-2xl backdrop-blur-xl dark:border-indigo-500/30 dark:from-indigo-900/40 dark:via-gray-900/40 dark:to-black/60">
+          {/* Background Glow Effects */}
+          <div className="absolute -top-24 -right-24 h-96 w-96 rounded-full bg-indigo-500/30 blur-3xl"></div>
+          <div className="absolute -bottom-24 -left-24 h-96 w-96 rounded-full bg-purple-500/20 blur-3xl"></div>
+
+          <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+            <div className="space-y-6 max-w-2xl">
+              <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
+                Engenharia de <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-200 to-white">Alta Escala</span>
+              </h2>
+              <p className="text-indigo-100/90 text-lg leading-relaxed">
+                Liderando a evolução técnica no <strong>PagBank</strong>, desenvolvendo plataformas críticas que suportam milhões de transações.
+                Transformo complexidade em arquiteturas resilientes e de alto valor de negócio.
+              </p>
+
+              <div className="flex flex-wrap gap-3 pt-2">
+                <span className="px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white text-xs md:text-sm font-medium backdrop-blur-md">Arquitetura Distribuída</span>
+                <span className="px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white text-xs md:text-sm font-medium backdrop-blur-md">Alta Disponibilidade</span>
+                <span className="px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white text-xs md:text-sm font-medium backdrop-blur-md">Missão Crítica</span>
+              </div>
+
+              <div className="pt-4">
+                <Link
+                  href="/sobre"
+                  className="group inline-flex items-center text-white font-semibold hover:text-indigo-200 transition-colors gap-2"
+                >
+                  Ver trajetória completa
+                  <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                </Link>
+              </div>
+            </div>
           </div>
-          <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-indigo-500 rounded-full blur-3xl opacity-50"></div>
         </div>
       </div>
     </div>
